@@ -1,0 +1,6 @@
+@DGIIApi_HostAddress = http://localhost:5054
+
+GET {{DGIIApi_HostAddress}}
+Accept: application/json
+
+###

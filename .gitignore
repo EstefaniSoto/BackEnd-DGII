@@ -1,0 +1,22 @@
+# Directorios y archivos generados por Visual Studio
+.vs/
+*.user
+*.suo
+*.log
+*.obj
+*.exe
+*.dll
+*.pdb
+
+# Archivos de configuración local
+*.config
+
+# Directorios de dependencias
+bin/
+obj/
+
+# Otros archivos ignorados
+*.nupkg
+*.snk
+*.suo
+*.user
