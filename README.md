@@ -1,17 +1,6 @@
 # DGII Backend
 
 Este es el proyecto backend para la prueba técnica de la DGII. Está desarrollado en .NET y proporciona la API para gestionar contribuyentes y comprobantes fiscales.
-## Video demostrativo de la página web
-
-Mire el video de demostración de la aplicación aquí: [Demostración de la Aplicación](https://youtu.be/587ASD0pMWE)
-
-## Diseño
-![image](https://github.com/user-attachments/assets/a650a0b4-70f3-4f00-bea8-f68258ed7403)
-
-![image](https://github.com/user-attachments/assets/3c10dfee-e38c-44f9-a552-61bbf29bc5c3)
-
-
-
 
 ## Requisitos Previos
 
@@ -33,12 +22,34 @@ Antes de comenzar, asegúrese de tener instalados los siguientes programas en su
    git clone https://github.com/EstefaniSoto/BackEnd-DGII.git
 2. **Navegue al directorio del proyecto:**
  ```bash
- cd DGIIApi
+ cd BackEnd-DGII
 ```
-2.1. **Crear base de datos (SQL Server)**
+3. **Abrir la Solución en Visual Studio**
+   
+Abra el archivo de solución **DGIIApi.sln** en Visual Studio. Esto cargará todos los proyectos incluidos en la solución.
+
+4. **Restaurar las Dependencias**
+
+En la ventana de la Consola del Administrador de Paquetes o en la terminal, ejecute el siguiente comando para restaurar las dependencias del proyecto:
+
+```bash
+
+dotnet restore
+```
+5. **Configurar la Cadena de Conexión**
+
+Edite el archivo appsettings.json en el directorio del proyecto y agregue su cadena de conexión de SQL Server:
+```bash
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=<YOUR_SERVER>;Database=DGII;Trusted_Connection=True;TrustServerCertificate=true;"
+  }
+}
+```
+6. **Crear base de datos (SQL Server)**
 ### Configuración de la Base de Datos
 
-1. **Crear la Base de Datos y Tablas**
+ **Crear la Base de Datos, Tablas y Procedimiento Almacenado**
 
    Ejecute el siguiente script SQL en su servidor de base de datos para crear la base de datos, las tablas, agregar datos iniciales y el procedimiento almacenado:
 
@@ -114,5 +125,10 @@ Antes de comenzar, asegúrese de tener instalados los siguientes programas en su
        COMMIT TRANSACTION;
    END;
    GO
- 
+```
+7. **Ejecutar el Proyecto**
+
+Para iniciar el servidor de desarrollo, haga clic en el botón de inicio en la parte superior de Visual Studio (ícono de triángulo verde). Asegúrese de seleccionar el perfil correcto para ejecutar el proyecto.
+
+El backend estará disponible en la URL http://localhost:5054, especificada en la configuración de su servidor. **Importante**: Asegúrese de que el proyecto esté corriendo desde esta URL, ya que las peticiones del frontend serán realizadas a esa dirección.
 
