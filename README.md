@@ -16,7 +16,7 @@ Antes de comenzar, asegúrese de tener instalados los siguientes programas en su
 
 1. **Clonar el Repositorio:**
 
-   Clone este repositorio en su máquina local usando el siguiente comando:
+   Clone este repositorio en Visual Studio dentro de su máquina local usando el siguiente comando:
 
    ```bash
    git clone https://github.com/EstefaniSoto/BackEnd-DGII.git
