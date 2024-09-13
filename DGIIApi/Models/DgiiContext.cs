@@ -20,7 +20,7 @@ namespace DGIIApi.Models
         {
             var rncCedulaParam = new SqlParameter("@RNC_Cedula", rncCedula);
             var montoParam = new SqlParameter("@Monto", monto ?? (object)DBNull.Value); // Usa DBNull.Value si el valor es nulo
-            var itbis18Param = new SqlParameter("@ITBIS18", itbis18 ?? (object)DBNull.Value); // Usa DBNull.Value si el valor es nulo
+            var itbis18Param = new SqlParameter("@ITBIS18", itbis18 ?? (object)DBNull.Value); 
 
             await Database.ExecuteSqlRawAsync("EXEC InsertComprobante @RNC_Cedula, @Monto, @ITBIS18", rncCedulaParam, montoParam, itbis18Param);
         }
